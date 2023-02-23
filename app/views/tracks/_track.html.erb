@@ -1,0 +1,14 @@
+<div id="<%= dom_id track %>">
+  <p>
+    <strong>Title:</strong>
+    <%= track.title %>
+  </p>
+
+  <p>
+    <strong>Publisher:</strong>
+    <%= track.user.name %>
+  </p>
+  
+  <%= render 'attachment', track: track %>
+  
+</div>

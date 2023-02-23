@@ -1,0 +1,15 @@
+<h1><%= @playlist.title %></h1></br>
+
+<%= form_tag(add_track_playlist_path(@playlist)) do %>
+  <%= select_tag :track_id, options_from_collection_for_select(Track.all, :id, :title) %>
+  <%= submit_tag "Add track" %>
+<% end %>
+
+<%= render 'playlist_table' %>
+
+<div>
+  <%= link_to "Edit this playlist", edit_playlist_path(@playlist) %> |
+  <%= link_to "Back to playlists", playlists_path %>
+
+  <%= button_to "Destroy this playlist", @playlist, method: :delete %>  
+</div>

@@ -1,0 +1,10 @@
+<h1>My tracks</h1>
+
+<div id="my tracks">
+    <% @my_tracks.each do |tracks| %>
+      <th><%= tracks.title %></th>
+      <td><%= render 'attachment', track: tracks %></td>
+    <% end %>
+</div>
+
+<%= link_to "New track", new_track_path %>

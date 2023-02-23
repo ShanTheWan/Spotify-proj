@@ -1,0 +1,9 @@
+<div class="row">
+  <% if track.file.attached? %>
+    <% if track.file.audio? %>
+      <div>
+        <%= audio_tag url_for(track.file), class: "message-audio", controls: "" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

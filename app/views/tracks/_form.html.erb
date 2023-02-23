@@ -1,0 +1,37 @@
+<%= form_with(model: track) do |form| %>
+  <% if track.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(track.errors.count, "error") %> prohibited this track from being saved:</h2>
+
+      <ul>
+        <% track.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_area :body, style: "resize: none" %>
+  </div>
+
+  <div>
+    <%= form.label :published_at %><em> (Optional)</em><br />
+    <%= form.datetime_field :published_at %>
+  </div>
+
+  <div>
+    <%= form.label :file, style: "display: block" %>
+    <%= form.file_field :file %>
+  </div> </br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

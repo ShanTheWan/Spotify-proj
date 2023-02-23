@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <%= render 'navbar' %>
+    <%= display_notice(notice) %>
+    <%= display_alert(alert) %>
     <%= yield %>
   </body>
 </html>
