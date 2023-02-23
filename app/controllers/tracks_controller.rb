@@ -8,7 +8,7 @@ class TracksController < ApplicationController
     @tracks = Track.published
 
     if params[:search].present?
-      @tracks = @tracks.where("title LIKE ?", "%#{params[:search]}%").or(Track.joins(:user).where("users.name LIKE ?", "%#{params[:search]}%"))
+      @tracks = @tracks.where("title LIKE ?", "%#{params[:search]}%")
     end
     
   end
