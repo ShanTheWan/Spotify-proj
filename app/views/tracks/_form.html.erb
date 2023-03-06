@@ -24,7 +24,7 @@
   <div>
     <%= form.label :published_at %><em> (Optional)</em><br />
     <%= form.datetime_field :published_at %>
-  </div>
+  </div></br>
 
   <div>
     <%= form.label :file, style: "display: block" %>
@@ -32,6 +32,6 @@
   </div> </br>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-dark my-2"%>
   </div>
 <% end %>

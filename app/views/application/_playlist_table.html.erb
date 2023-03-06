@@ -14,7 +14,7 @@
         <td><%= track.user.name %></td>
         <td><%= render 'attachment', track: track %></td>
         <td>
-          <%= button_to 'Remove', remove_track_playlist_path(@playlist, id: track.id), method: :delete, data: { confirm: "Are you sure?" } %>
+          <%= button_to 'Remove', remove_track_playlist_path(@playlist, id: track.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-dark my-2"%>
         </td>
       </tr>
     <% end %>

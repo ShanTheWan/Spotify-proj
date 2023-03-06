@@ -1,5 +1,5 @@
 class TracksController < ApplicationController
-  before_action :set_track, only: %i[ show edit update destroy self.ransackable_attributes ]
+  before_action :set_track, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: %i[ index show ]
   before_action :authorize_user!, only: %i[ edit update destroy ]
 
@@ -10,7 +10,6 @@ class TracksController < ApplicationController
     if params[:search].present?
       @tracks = @tracks.where("title LIKE ?", "%#{params[:search]}%")
     end
-    
   end
 
   # GET /tracks/1 or /tracks/1.json

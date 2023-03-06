@@ -2,7 +2,7 @@
 
 <%= form_tag(add_track_playlist_path(@playlist)) do %>
   <%= select_tag :track_id, options_from_collection_for_select(Track.all, :id, :title) %>
-  <%= submit_tag "Add track" %>
+  <%= submit_tag "Add track", class: "btn btn-dark my-2" %>
 <% end %>
 
 <%= render 'playlist_table' %>
